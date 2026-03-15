@@ -1,0 +1,97 @@
+/* Reset & body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    transition: background 1s ease;
+}
+
+.weather-app {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 90%;
+}
+
+/* Input section */
+.input-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Weather result */
+.weather-result {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-result img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Error styling */
+.error {
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive font sizes */
+@media (max-width: 400px) {
+    .weather-app {
+        padding: 20px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+}
